@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package apis.proto.v1alpha1.public;
+option go_package = "v1alpha1/public";
+
+import "google/api/annotations.proto";
+import "google/protobuf/empty.proto";
+
+service Public {
+  rpc GetInstance (google.protobuf.Empty) returns (GetInstanceResponse) {
+    option (google.api.http) = {
+      get: "/api/v1/public/instance",
+    };
+  }
+}
+
+message GetInstanceResponse {
+  string code = 1;
+  string version = 2;
+}

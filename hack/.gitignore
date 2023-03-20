@@ -1,0 +1,3 @@
+# The generated certificate file will be ignored.
+/certs/*.csr
+/certs/*.pem

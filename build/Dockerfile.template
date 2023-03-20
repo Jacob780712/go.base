@@ -1,0 +1,12 @@
+FROM {{base_image}}
+
+MAINTAINER {{maintainer}}
+
+RUN mkdir -p {{app_path}}
+
+COPY ./{{source_app_path}} {{app_path}}/
+RUN mv {{app_path}}/{{source_app_path}} {{app_path}}/{{service_name}}
+
+WORKDIR {{app_path}}/
+
+CMD ["{{app_path}}/{{service_name}}", "run"]

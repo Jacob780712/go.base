@@ -1,0 +1,17 @@
+{
+  "signing": {
+    "default": {
+      "expiry": "168h"
+    },
+    "profiles": {
+      "server": {
+        "expiry": "970080h",
+        "usages": [
+          "signing",
+          "disism",
+          "server"
+        ]
+      }
+    }
+  }
+}
